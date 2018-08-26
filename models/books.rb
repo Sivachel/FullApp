@@ -12,3 +12,4 @@ class Book
     books_result = conn.exec(sql)
     book = self.hydrate(books_result[0])
   end
+end
