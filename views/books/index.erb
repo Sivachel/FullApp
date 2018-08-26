@@ -1,0 +1,9 @@
+<h1>Welcome to the homepage</h1>
+<% @posts.eaach do |post| %>
+
+<div>
+  <h3> <a href="<%= post.id %>">book.title</a></h3>
+  <p><%= book.book_body %></p>
+</div>
+
+<% end %>

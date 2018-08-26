@@ -34,6 +34,9 @@ class BooksController < Sinatra::Base
 
   get "/:id/edit" do
     @title = "Edit Book"
+    id = params[:id].to_i
+    @book = Book.find(id)
+    erb :'books/edit'
   end
 
 
