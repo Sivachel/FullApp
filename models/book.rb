@@ -12,7 +12,7 @@ class Book
     if (!self.id)
       sql = "INSERT INTO book (title, book_body, genre) VALUES ('#{self.title}', '#{self.book_body}', '#{self.genre}')"
     else
-      sql = "UPDATE book SET title='#{self.title}', book_body='#{self.post_body}', genre='#{self.genre}' WHERE id = #{self.id}"
+      sql = "UPDATE book SET title='#{self.title}', book_body='#{self.book_body}', genre='#{self.genre}' WHERE id = #{self.id}"
     end
     conn.exec(sql)
   end
@@ -46,8 +46,9 @@ class Book
     book.title = book_data['title']
     book.book_body = book_data['book_body']
     book.genre = book_data['genre']
+    book
   end
 
-
 end
-# end of class Book
+
+Book.all

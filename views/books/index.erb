@@ -1,8 +1,8 @@
 <h1>Welcome to the homepage</h1>
 <% @books.each do |book| %>
-
 <div>
-  <h3><%= book.title %></h3>
+  <h3><a href="<%= book.id %>"><%= book.title %></a></h3>
     <p><%= book.book_body %></p>
+    <p><%= book.genre %></p>
 </div>
 <% end %>
