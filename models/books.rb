@@ -7,6 +7,26 @@ class Book
     conn = PG.connect(dbname: "books")
   end
 
+  def save
+    conn = Book.open_connection
+    if (!self.id)
+      sql = "INSERT INTO book (title, book_body, genre) VALUES ('#{self.title}', '#{self.book_body}', '#{self.genre}')"
+    else
+      sql = "UPDATE book SET title='#{self.title}', book_body='#{self.post_body}', genre='#{self.genre}' WHERE id = #{self.id}"
+    end
+    conn.exec(sql)
+  end
+
+  def self.all
+    conn = self.open_connection
+    sql = "SELECT id, title, book_body, genre FROM book ORDER BY id"
+    result = conn.exec(sql)
+    books = result.map do |result|
+      self.hydrate(result)
+  end
+    books
+  end
+
   def self.find(id)
     conn = self.open_connection
     sql = "SELECT * FROM book WHERE id = #{id} LIMIT 1"
