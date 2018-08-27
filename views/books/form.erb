@@ -1,13 +1,14 @@
 <form action="/<%= @book.id %>" method="post">
 
   <div>
-    <label>Title</label>
-    <input type="text" name="title" placeholder="Enter the title of the book" value="<%= @book.title %>">
+    <input type="text" name="title" placeholder="Any title?" value="<%= @book.title %>">
   </div>
 
   <div>
-    <label>Body</label>
-    <textarea name="book_body" placeholder="Enter a body"> <%= @book.book_body %></textarea>
+    <textarea name="book_body" placeholder="Add some info?"> <%= @book.book_body %></textarea>
+  </div>
+  <div>
+    <textarea name="genre" placeholder="Chose a genre"> <%= @book.genre %></textarea>
   </div>
 
   <div>

@@ -27,6 +27,7 @@ class BooksController < Sinatra::Base
     book.title = params[:title]
     book.book_body = params[:book_body]
     book.genre = params[:genre]
+    book.images
     book.save
     redirect "/"
   end
@@ -47,6 +48,7 @@ class BooksController < Sinatra::Base
     book = Book.new
     book.title = params[:title]
     book.book_body = params[:book_body]
+    book.genre = params[:genre]
     book.save
     redirect "/"
   end

@@ -1,13 +1,26 @@
 h1 {
 	color: white;
   font-family: 'Monoton', cursive;
-	font-size: 80px;
-	font-weight: 2em;
+	font-size: 70px;
 	letter-spacing: -2px;
 	line-height: 84px;
 	margin-bottom: 72px;
 	text-transform: uppercase;
   text-shadow: 2px 2px 3px black, 0 0 25px blue, 0 0 5px #9A0A35;
+}
+.story {
+  width: 60%;
+  float: left;
+}
+
+h3 {
+  display: inline-block;
+  padding-bottom: 20px;
+}
+
+img {
+  width: 30%;
+  padding-bottom: 100px;
 }
 
 p {
@@ -20,10 +33,19 @@ p {
   text-shadow: 0 0 25px blue, 0 0 5px #9A0A35;
 }
 
+form.div {
+  padding-bottom: 30px;
+}
+
+.bottom_show {
+	border: white;
+	text-align: center;
+	text-transform: uppercase;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 form {
-  margin-top: 100px;
-  padding: 5px;
-  margin: auto;
+  margin: 30px auto;
   width: 390px;
   text-transform: uppercase;
   font-family: 'Source Sans Pro', sans-serif;
@@ -33,6 +55,8 @@ input, textarea {
   text-transform: uppercase;
   font-family: 'Source Sans Pro', sans-serif;
   width: 250px;
+	border-radius: 20px;
+	color: grey;
 }
 
 nav {
@@ -61,9 +85,11 @@ a:hover
   background-image: url(background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 700px;
   width: auto;
+  overflow: hidden;
   background-attachment: fixed;
+  background-size:cover;
+  display: block;
 }
 
 footer {
@@ -71,6 +97,10 @@ footer {
 	color: white;
   font-family: 'Source Sans Pro', sans-serif;
   text-transform: uppercase;
-  margin-top: 220px;
   text-shadow: 0 0 25px blue, 0 0 5px #9A0A35;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }

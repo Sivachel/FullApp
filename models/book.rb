@@ -1,6 +1,6 @@
 class Book
 # Do a book class
-  attr_accessor(:id, :title, :book_body, :genre)
+  attr_accessor(:id, :title, :book_body, :genre, :images)
 
   def self.open_connection
     # connect to database
@@ -10,16 +10,16 @@ class Book
   def save
     conn = Book.open_connection
     if (!self.id)
-      sql = "INSERT INTO book (title, book_body, genre) VALUES ('#{self.title}', '#{self.book_body}', '#{self.genre}')"
+      sql = "INSERT INTO book (title, book_body, genre) VALUES ('#{self.title}', '#{self.book_body}', '#{self.genre}', '#{self.images}')"
     else
-      sql = "UPDATE book SET title='#{self.title}', book_body='#{self.book_body}', genre='#{self.genre}' WHERE id = #{self.id}"
+      sql = "UPDATE book SET title='#{self.title}', book_body='#{self.book_body}', genre='#{self.genre}', '#{self.images}' WHERE id = #{self.id}"
     end
     conn.exec(sql)
   end
 
   def self.all
     conn = self.open_connection
-    sql = "SELECT id, title, book_body, genre FROM book ORDER BY id"
+    sql = "SELECT id, title, book_body, genre, images FROM book ORDER BY id"
     result = conn.exec(sql)
     books = result.map do |result|
       self.hydrate(result)
@@ -46,6 +46,7 @@ class Book
     book.title = book_data['title']
     book.book_body = book_data['book_body']
     book.genre = book_data['genre']
+    book.images = book_data['images']
     book
   end
 
