@@ -10,7 +10,7 @@ class Book
   def save
     conn = Book.open_connection
     if (!self.id)
-      sql = "INSERT INTO book (title, book_body, genre) VALUES ('#{self.title}', '#{self.book_body}', '#{self.genre}', '#{self.images}')"
+      sql = "INSERT INTO book (title, book_body, genre, images) VALUES ('#{self.title}', '#{self.book_body}', '#{self.genre}', '#{self.images}')"
     else
       sql = "UPDATE book SET title='#{self.title}', book_body='#{self.book_body}', genre='#{self.genre}', '#{self.images}' WHERE id = #{self.id}"
     end

@@ -80,15 +80,17 @@ a:hover
   text-decoration: underline;
 }
 
-.container-fluid {
-  text-align: center;
+body {
   background-image: url(background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   width: auto;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-attachment: fixed;
-  background-size:cover;
+}
+
+.container-fluid {
+  text-align: center;
   display: block;
 }
 
