@@ -1,52 +1,36 @@
 h1 {
-  color: #fff;
-  font-family: 'Righteous', cursive;
-  font-size: 65px;
-  font-weight: normal;
-  line-height: 60px;
-  margin: 10px 0 20px;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 0 #000;
-  margin: 10px 0 24px;
-  text-align: center; }
-
-
-h2 {
-  font-size: 30px;
-  letter-spacing: -1px;
-  color: #DFBF84;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 0 #000;
-  margin: 10px 0 24px;
-  text-align: center;
-  line-height: 50px;
+	color: #231900;
+  font-family: 'Monoton', cursive;
+	font-size: 80px;
+	font-weight: 2em;
+	letter-spacing: -2px;
+	line-height: 84px;
+	margin-bottom: 72px;
+	text-transform: uppercase;
 }
-
 
 p {
-  color: #f6f6f6;
-  font-family: 'Orienta', sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  margin: 0 0 24px;
-  text-align: center;
+	color: #231900;
+  font-family: 'Source Sans Pro', sans-serif;
+	font-size: 24px;
+	line-height: 48px;
+	margin-bottom: 48px;
+  text-align: justify;
+  margin: auto 10%;
 }
-
 
 a {
-  color: #e8d4a7;
-  text-decoration: none;
-  text-align: right;
-  padding: 15px;
-  font-size: 20px;
+	color: #231900;
 }
 
 
-a:hover {
-  color: #da9650;
-  text-decoration: blink;
+a:hover { color: #1c1c1c;
+  text-decoration: underline;
 }
 
-.container-fluid{
+.container-fluid {
   text-align: center;
+  display: inline-block;
+  background-color: lightgrey;
+  /* position: relative; */
 }
