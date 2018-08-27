@@ -51,7 +51,7 @@ class BooksController < Sinatra::Base
     redirect "/"
   end
 
-  delete ":id" do
+  delete "/:id" do
     id = params[:id].to_i
     Book.destroy(id)
     redirect "/"
