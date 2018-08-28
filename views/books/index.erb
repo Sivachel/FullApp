@@ -1,12 +1,13 @@
 <h1>Marvel Assemble</h1>
 <% @books.each do |book| %>
+<!-- goes through every book and return its information -->
 <div>
   <div class="story">
     <h3 style="text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px #9A0A35"><a href="<%= book.id %>"><%= book.title %></a></h3>
     <p><%= book.book_body %></p>
     <p><%= book.genre %></p>
   </div>
-
+  <!-- end of the div story  -->
   <img src="<%= book.images %>" alt="image">
 </div>
 <% end %>

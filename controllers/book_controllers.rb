@@ -14,6 +14,7 @@ class BooksController < Sinatra::Base
     @book = Book.find(id)
     erb :'books/edit'
   end
+  # edit the informations
 
   get "/" do
     @title = "Books"
@@ -37,6 +38,7 @@ class BooksController < Sinatra::Base
     @book = Book.new
     erb :'books/new'
   end
+  # Send the information of the form
 
   get "/:id" do
     id = params[:id].to_i
@@ -49,9 +51,11 @@ class BooksController < Sinatra::Base
     book.title = params[:title]
     book.book_body = params[:book_body]
     book.genre = params[:genre]
+    book.images = params[:images]
     book.save
     redirect "/"
   end
+
 
   delete "/:id" do
     id = params[:id].to_i

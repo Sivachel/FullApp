@@ -1,7 +1,7 @@
 class Book
 # Do a book class
   attr_accessor(:id, :title, :book_body, :genre, :images)
-
+  # initialize
   def self.open_connection
     # connect to database
     conn = PG.connect(dbname: "books")
@@ -25,6 +25,7 @@ class Book
       self.hydrate(result)
   end
     books
+    # return all the items
   end
 
   def self.find(id)
@@ -40,6 +41,7 @@ class Book
     conn.exec(sql)
   end
 
+  # Upadate all the items
   def self.hydrate(book_data)
     book = Book.new
     book.id = book_data['id']

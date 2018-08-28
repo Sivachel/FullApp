@@ -1,3 +1,4 @@
+/* I choosed to stay with the same color scheme as my background  */
 h1 {
 	color: white;
   font-family: 'Monoton', cursive;
@@ -10,7 +11,7 @@ h1 {
 }
 .story {
   width: 60%;
-  float: left;
+  float: left; /* I want my text on the left part of the screen, so I put my images on the right */
 }
 
 h3 {
@@ -46,7 +47,7 @@ form.div {
 
 form {
   margin: 30px auto;
-  width: 390px;
+  width: 450px;
   text-transform: uppercase;
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -82,16 +83,20 @@ a:hover
 
 body {
   background-image: url(background.jpg);
+  /* Put the background image in th body, so it covers the whole page  */
+  /* if you put it in container fluid, the background is only the width of the div, so the text */
   background-size: cover;
   background-repeat: no-repeat;
   width: auto;
   /* overflow: hidden; */
   background-attachment: fixed;
+  /* background doesn't move */
 }
 
 .container-fluid {
   text-align: center;
   display: block;
+  /* general settings of the page */
 }
 
 footer {

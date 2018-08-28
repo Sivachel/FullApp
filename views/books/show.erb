@@ -1,6 +1,7 @@
 <h1><%= @book.title %></h1>
 <p><%= @book.book_body %></p>
 <p><%= @book.genre %></p>
+<!-- I choosed to not display the image, as to not have a too crowded page -->
 
 <form class="bottom_show" action="/<%= @book.id %>" method="POST">
   <input type="hidden" name="_method" value="DELETE">
